@@ -26,7 +26,7 @@ MongoClient.connect(connectionString)
     app.get('/', (req, res) => {
         quotesCollection.find().toArray()
             .then(results =>{
-                console.log(results)
+                // console.log(results)
                 res.render('index.ejs', { quotes: results})
             })
             .catch(error => console.error(error))   
@@ -52,7 +52,7 @@ MongoClient.connect(connectionString)
             }
         )
         .then(result => {
-            console.log(result)
+            // console.log(result)
             res.json('Success')
         })
         .catch(error => console.error(error))
